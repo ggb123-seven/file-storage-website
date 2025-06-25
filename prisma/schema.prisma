@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model File {
+  id           String   @id @default(cuid())
+  filename     String   @unique // 存储文件名(唯一)
+  originalName String   // 原始文件名
+  mimeType     String   // 文件类型
+  size         Int      // 文件大小(字节)
+  path         String   // 文件存储路径
+  uploadDate   DateTime @default(now())
+  downloadCount Int     @default(0)
+  isActive     Boolean  @default(true) // 文件是否可用
+  description  String?  // 文件描述(可选)
+  tags         String?  // 文件标签(可选，JSON格式)
+
+  // 索引优化
+  @@index([uploadDate])
+  @@index([mimeType])
+  @@index([isActive])
+  @@map("files")
+}

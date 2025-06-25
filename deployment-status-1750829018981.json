@@ -1,0 +1,11 @@
+{
+  "ready": true,
+  "warnings": [],
+  "errors": [],
+  "summary": {
+    "passedRequired": 6,
+    "totalRequired": 6,
+    "warnings": 0,
+    "errors": 0
+  }
+}

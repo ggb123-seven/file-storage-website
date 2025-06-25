@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "ADMIN_SECRET_KEY": "@admin_secret_key",
+    "MAX_FILE_SIZE": "104857600",
+    "ALLOWED_FILE_TYPES": "@allowed_file_types",
+    "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
+    "CLOUDINARY_API_KEY": "@cloudinary_api_key",
+    "CLOUDINARY_API_SECRET": "@cloudinary_api_secret",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
+    "NEXTAUTH_URL": "@nextauth_url",
+    "DOMAIN_NAME": "@domain_name"
+  },
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  },
+  "regions": ["iad1"],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization, x-admin-key"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "passed": 0,
+  "failed": 7,
+  "tests": [
+    {
+      "name": "网站基本访问",
+      "passed": false,
+      "message": "访问失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:49.617Z"
+    },
+    {
+      "name": "API健康检查",
+      "passed": false,
+      "message": "API请求失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:50.625Z"
+    },
+    {
+      "name": "数据库连接",
+      "passed": false,
+      "message": "数据库连接测试失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:51.634Z"
+    },
+    {
+      "name": "管理员权限验证",
+      "passed": false,
+      "message": "权限测试失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:52.648Z"
+    },
+    {
+      "name": "文件搜索功能",
+      "passed": false,
+      "message": "搜索测试失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:53.662Z"
+    },
+    {
+      "name": "API响应性能",
+      "passed": false,
+      "message": "性能测试失败: ",
+      "details": {
+        "responseTime": 2,
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:54.673Z"
+    },
+    {
+      "name": "安全头部配置",
+      "passed": false,
+      "message": "安全头部检查失败: ",
+      "details": {
+        "error": ""
+      },
+      "timestamp": "2025-06-25T05:23:55.683Z"
+    }
+  ]
+}

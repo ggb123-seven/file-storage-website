@@ -1,0 +1,123 @@
+{
+  "exportDate": "2025-06-25T04:50:38.012Z",
+  "totalFiles": 9,
+  "files": [
+    {
+      "id": "cmcae52xc00007ai0m57zzh5i",
+      "filename": "1750761411597_u53ry4b9esh.txt",
+      "originalName": "test-upload.txt",
+      "mimeType": "text/plain",
+      "size": 30,
+      "path": "uploads\\1750761411597_u53ry4b9esh.txt",
+      "uploadDate": "2025-06-24T10:36:51.601Z",
+      "downloadCount": 1,
+      "isActive": false,
+      "description": "API测试上传文件",
+      "tags": null
+    },
+    {
+      "id": "cmcae722b00017ai02q4rtm7a",
+      "filename": "1750761503793_7mfiihdc51v.txt",
+      "originalName": "document.txt",
+      "mimeType": "text/plain",
+      "size": 24,
+      "path": "uploads\\1750761503793_7mfiihdc51v.txt",
+      "uploadDate": "2025-06-24T10:38:23.795Z",
+      "downloadCount": 0,
+      "isActive": true,
+      "description": "文档测试",
+      "tags": null
+    },
+    {
+      "id": "cmcae724j00027ai02gxb2odu",
+      "filename": "1750761503872_dhqruc0zwtq.txt",
+      "originalName": "image.txt",
+      "mimeType": "text/plain",
+      "size": 18,
+      "path": "uploads\\1750761503872_dhqruc0zwtq.txt",
+      "uploadDate": "2025-06-24T10:38:23.875Z",
+      "downloadCount": 0,
+      "isActive": true,
+      "description": "图片测试",
+      "tags": null
+    },
+    {
+      "id": "cmcae726900037ai0gv9oskd3",
+      "filename": "1750761503935_khglmnvuh.txt",
+      "originalName": "data.txt",
+      "mimeType": "text/plain",
+      "size": 17,
+      "path": "uploads\\1750761503935_khglmnvuh.txt",
+      "uploadDate": "2025-06-24T10:38:23.938Z",
+      "downloadCount": 0,
+      "isActive": true,
+      "description": "数据文件",
+      "tags": null
+    },
+    {
+      "id": "cmcaee2p300047ai0o6fv12rr",
+      "filename": "1750761831205_96jtblur34p.txt",
+      "originalName": "final-test.txt",
+      "mimeType": "text/plain",
+      "size": 23,
+      "path": "uploads\\1750761831205_96jtblur34p.txt",
+      "uploadDate": "2025-06-24T10:43:51.208Z",
+      "downloadCount": 1,
+      "isActive": true,
+      "description": "最终测试文件",
+      "tags": "test,final"
+    },
+    {
+      "id": "cmcaf8mx700007akspiitjrcf",
+      "filename": "1750763257092_2f5qoofx8ni.txt",
+      "originalName": "authorized-test.txt",
+      "mimeType": "text/plain",
+      "size": 36,
+      "path": "uploads\\1750763257092_2f5qoofx8ni.txt",
+      "uploadDate": "2025-06-24T11:07:37.099Z",
+      "downloadCount": 1,
+      "isActive": true,
+      "description": "权限测试文件",
+      "tags": "test,upload,permission"
+    },
+    {
+      "id": "cmcafxbg700007ajceotmd0wh",
+      "filename": "1750764408621_vc3ayht9ntp.txt",
+      "originalName": "test-image.txt",
+      "mimeType": "text/plain",
+      "size": 18,
+      "path": "uploads\\1750764408621_vc3ayht9ntp.txt",
+      "uploadDate": "2025-06-24T11:26:48.631Z",
+      "downloadCount": 1,
+      "isActive": true,
+      "description": "测试图片文件",
+      "tags": "test,automated"
+    },
+    {
+      "id": "cmcafxbiu00017ajcceig9fkw",
+      "filename": "1750764408724_wywnaiupd9h.txt",
+      "originalName": "test-document.txt",
+      "mimeType": "text/plain",
+      "size": 21,
+      "path": "uploads\\1750764408724_wywnaiupd9h.txt",
+      "uploadDate": "2025-06-24T11:26:48.726Z",
+      "downloadCount": 0,
+      "isActive": true,
+      "description": "测试文档文件",
+      "tags": "test,automated"
+    },
+    {
+      "id": "cmcafxbl000027ajc5cp3bj29",
+      "filename": "1750764408803_wtnfk4ywkpf.txt",
+      "originalName": "test-data.txt",
+      "mimeType": "text/plain",
+      "size": 17,
+      "path": "uploads\\1750764408803_wtnfk4ywkpf.txt",
+      "uploadDate": "2025-06-24T11:26:48.805Z",
+      "downloadCount": 1,
+      "isActive": true,
+      "description": "测试数据文件",
+      "tags": "test,automated"
+    }
+  ]
+}

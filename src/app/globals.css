@@ -1,0 +1,360 @@
+@import "tailwindcss";
+
+/* 炫酷设计系统 - 颜色变量 */
+:root {
+  /* 炫酷主色调 - 霓虹蓝紫渐变 */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-glow: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --warning-gradient: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+  --error-gradient: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+
+  /* 深色背景系统 */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-hover: rgba(255, 255, 255, 0.1);
+
+  /* 文字颜色 */
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8d1;
+  --text-muted: #8b8ba7;
+  --text-accent: #4facfe;
+
+  /* 边框和分割线 */
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(79, 172, 254, 0.3);
+  --border-glow: rgba(102, 126, 234, 0.5);
+
+  /* 阴影系统 */
+  --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(102, 126, 234, 0.4);
+  --shadow-neon: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 16px 64px rgba(102, 126, 234, 0.2);
+
+  /* 动画变量 */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-glow: box-shadow 0.3s ease, transform 0.3s ease;
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* 基础样式重置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+  /* 炫酷背景效果 */
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+/* 炫酷背景动画 */
+@keyframes backgroundShift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+  }
+  33% {
+    background-position: 30% 70%, 70% 30%, 80% 20%;
+  }
+  66% {
+    background-position: 70% 30%, 30% 70%, 20% 80%;
+  }
+}
+
+/* 炫酷滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: var(--shadow-glow-lg);
+}
+
+/* 选择文本样式 */
+::selection {
+  background: rgba(79, 172, 254, 0.3);
+  color: var(--text-primary);
+}
+
+/* 炫酷焦点样式 */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--border-accent), var(--shadow-glow);
+}
+
+/* 玻璃态效果 */
+.glass-effect {
+  background: var(--bg-glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.glass-effect:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* 霓虹发光效果 */
+.neon-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.neon-glow:hover::before {
+  left: 100%;
+}
+
+/* 炫酷按钮样式 */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--text-primary);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-lg);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* 炫酷卡片样式 */
+.card-cool {
+  background: var(--bg-glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-cool::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-cool:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-cool:hover::before {
+  opacity: 1;
+}
+
+/* 炫酷动画类 */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-bounce {
+  animation: scaleBounce 0.5s ease-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: var(--shadow-glow);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: var(--shadow-glow-lg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 响应式容器 */
+.container-cool {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .container-cool { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .container-cool { padding: 0 2rem; }
+}
+
+/* Edge浏览器优化 */
+@supports (-ms-ime-align: auto) {
+  .edge-optimized {
+    -ms-overflow-style: scrollbar;
+  }
+
+  /* Edge特定的玻璃效果回退 */
+  .glass-effect {
+    background: rgba(26, 26, 46, 0.8);
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .glass-effect {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --border-primary: rgba(255, 255, 255, 0.3);
+    --text-secondary: #ffffff;
+  }
+}
+
+/* 减少动画偏好支持 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body {
+    animation: none;
+  }
+}
